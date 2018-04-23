@@ -18,6 +18,3 @@ if __name__ == '__main__':
     app.secret_key='dush'
     manager.run()
 manager.add_command('server', Server)
-
-if __name__ == '__main__':
-    manager.run()

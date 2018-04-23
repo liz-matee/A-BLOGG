@@ -8,4 +8,3 @@ class DevConfig(Config):
     DEBUG = True
 
 config_options ={"production":ProdConfig,"default":DevConfig}
-
