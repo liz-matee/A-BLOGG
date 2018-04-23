@@ -40,6 +40,6 @@ def register():
         cur.close()
 
         flash('registered successfully','success')
-        
-        return render_template('register.html')
+
+        redirect(url_for('register.html'))
     return render_template('register.html', form=form)
