@@ -43,7 +43,3 @@ def register():
 
         redirect(url_for('register.html'))
     return render_template('register.html', form=form)
-
-# @main.route('/')
-# def index():
-#     return '<h1> Hello World </h1>'
