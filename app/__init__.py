@@ -9,7 +9,16 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 
 def create_app(config_state):
+
     app = Flask(__name__)
+    app.config['SQLAlchemy_HOST'] = 'localhost'
+    app.config['SQLAlchemy_USER'] = 'root'
+    app.config['SQLAlchemy_PASSWORD'] = 'aschenbrenner'
+    app.config['SQLAlchemy_DB'] = 'blog'
+    app.config['SQLAlchemy_CURSORCLASS'] = 'DictCursor'
+
+    sqlalchemy = SQLAlchemy(app)
+
     app.config.from_object(config_options[config_state])
 
 

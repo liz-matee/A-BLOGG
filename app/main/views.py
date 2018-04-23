@@ -26,5 +26,20 @@ class RegisterForm(Form):
 def register():
     form = RegisterForm(request.form)
     if request.method == 'POST' and form.validate():
+        name = form.name.data
+        email = form.email.data
+        username = form.username.data
+        password = sha256_crypt.encrypt(str(form.password.data))
+
+        cur = sqlalchemy.connection.cursor()
+
+        cur.execute("INSERT INTO users(name, email, username, password) VALUES(%s, %s, %s, %s)",(name, email, username, password))
+
+        sqlalchemy.connection.commit()
+
+        cur.close()
+
+        flash('registered successfully','success')
+        
         return render_template('register.html')
     return render_template('register.html', form=form)
