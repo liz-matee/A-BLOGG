@@ -4,15 +4,11 @@ from config import config_options
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 67526690324b2686fd6e0a76a7df02d3d0865bd2
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 
 def create_app(config_state):
-<<<<<<< HEAD
 
     app = Flask(__name__)
     app.config['SQLAlchemy_HOST'] = 'localhost'
@@ -23,9 +19,7 @@ def create_app(config_state):
 
     sqlalchemy = SQLAlchemy(app)
 
-=======
     app = Flask(__name__)
->>>>>>> 67526690324b2686fd6e0a76a7df02d3d0865bd2
     app.config.from_object(config_options[config_state])
 
 
@@ -35,8 +29,6 @@ def create_app(config_state):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 67526690324b2686fd6e0a76a7df02d3d0865bd2
+
     return app
