@@ -7,7 +7,7 @@
   # Liz Matee
  
 # Instructions
-
+  run ./start.sh on your terminal to use the app
 
 # Technologies used
   python3.6
