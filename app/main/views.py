@@ -1,4 +1,5 @@
 from . import main
+<<<<<<< HEAD
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
@@ -43,3 +44,10 @@ def register():
 
         redirect(url_for('register.html'))
     return render_template('register.html', form=form)
+=======
+
+@main.route('/')
+def index():
+    return '<h1> Hello World </h1>'
+
+>>>>>>> 67526690324b2686fd6e0a76a7df02d3d0865bd2
