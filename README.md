@@ -12,8 +12,6 @@
 # Technologies used
   python3.6
   
-  HTML
-  
   Bootstrap
   
   flask
