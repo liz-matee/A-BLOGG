@@ -11,6 +11,9 @@
 
 # Technologies used
   python3.6
-  
+  HTML5
+  CSS
+  Bootstrap4
+  flask
 # License
   MIT ©Liz Matee 2018
